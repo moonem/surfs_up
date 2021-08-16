@@ -1,20 +1,15 @@
-import flask
-
-
-# pip install flask
-
-# Import flask dependency
+# import dependencies
 from flask import Flask
 
-# Create a new Flask App instance
+# create a new Flask instance called app
 app = Flask(__name__)
 
-# Define the starting point also knows as "root"
+# define the starting point, also known as the root. 
+# To do this, we'll use the function @app.route('/')
 @app.route('/')
-
-# Create a function 'hello_world'. Whenever you make a route in Flask, you put the code you want in that specific route below
 def hello_world():
     return 'Hello world'
 
-# Modify the path that will run our app.py file so that we can run our file
-#
+# For our FLASK_APP environment variable, we want to 
+# modify the path that will run our app.py file
+#export FLASK_APP=app.py
